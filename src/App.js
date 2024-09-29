@@ -1,23 +1,34 @@
-import logo from './logo.svg';
+import Fix from './Fix';
 import './App.css';
+import AppName from './AppName';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Item1 from './Item1';
 
 function App() {
+  const work = [
+    {
+      workname: "Buy Milk",
+      workdate: "24/08/2024",
+    },
+    {
+      workname: "Buy Eggs",
+      workdate: "25/08/2024",
+    },
+    {
+      workname: "Buy Alcohal",
+      workdate: "26/08/2024",
+    },
+    {
+      workname: "Buy Egg",
+      workdate: "27/08/2024",
+    }
+  ];
+  
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <AppName />
+      <Fix />
+      <Item1 items={work} />
     </div>
   );
 }
